@@ -1,0 +1,26 @@
+version: "3"
+services:
+  zigbee2mqtt:
+    container_name: zigbee2mqtt
+    image: koenkk/zigbee2mqtt
+    restart: always
+    ports:
+      - 8080:8080
+    environment:
+      - TZ=Europe/Berlin
+        #   devices:
+      # - /dev/ttyACM0
+    volumes:
+      - /run/udev:/run/udev:ro
+      - type: volume
+        source: nfs
+        target: /app/data
+        volume:
+          nocopy: true
+volumes:
+  nfs:
+    driver_opts:
+      type: "nfs"
+      o: "addr=192.168.1.4,nolock,soft,rw"
+      device: ":/nfs/zigbee2mqtt"
+
