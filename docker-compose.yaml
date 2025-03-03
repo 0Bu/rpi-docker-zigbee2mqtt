@@ -1,6 +1,6 @@
 services:
   zigbee2mqtt:
-    image: koenkk/zigbee2mqtt:2.1.2
+    image: koenkk/zigbee2mqtt:2.1.3
     container_name: zigbee2mqtt
     restart: always
     ports:
