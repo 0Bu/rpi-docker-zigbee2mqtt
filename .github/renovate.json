@@ -1,9 +1,7 @@
 {
   "extends": ["config:recommended"],
-  "platform": "github",
   "configMigration": true,
   "automerge": true,
   "bumpVersion": "patch",
-  "ignoreTests": true,
-  "repositories": ["0Bu/rpi-docker-zigbee2mqtt"]
+  "ignoreTests": true
 }
