@@ -1,7 +1,0 @@
-{
-  "extends": ["config:recommended"],
-  "configMigration": true,
-  "automerge": true,
-  "bumpVersion": "patch",
-  "ignoreTests": true
-}
